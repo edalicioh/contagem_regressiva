@@ -1,0 +1,115 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #000 url(dawn-1840298_1920.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: luminosity ;
+}
+.container{
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 12%;
+    right: 12%;
+    background: url(dawn-1840298_1920.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, .5),
+                0  0  100px rgba(0, 0, 0, .1);
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 5em;
+    line-height: .7em;
+    color: #333;
+}
+.container h2 span { 
+    color: aliceblue;
+    display: block;
+    font-weight: 300;
+    letter-spacing: 6px;
+    font-size: .2em;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
+.countdown div { 
+    position: relative;
+    width: 10rem;
+    height: 7rem;
+    line-height: 100px;
+    text-align: center;
+    background: rgba(0,0,0,.3);
+    margin-bottom: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 3em;
+    font-weight: 500;
+    box-shadow: 0 0 6px #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #fff;
+}
+.countdown div:before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: rgba(255, 255, 0 , .7);
+    color: #333;
+    font-size: .35em;
+    line-height: 35px;
+    font-weight: 300;
+    box-shadow: 0 0 6px #fff;
+} 
+.countdown #day:before{
+    content: 'Dias';
+}
+
+.countdown #hour:before{
+    content: 'Horas';
+}
+.countdown #minute:before{
+    content: 'Minutos';
+}
+.countdown #second:before{
+    content: 'Segundos';
+}
+
+@media (max-width: 600px) {
+    .container{
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .container h2 {
+        text-align: center;
+        font-size: 3em;
+        line-height: .7em;
+        color: #333;
+        margin: 20% 0;
+    }
+    .countdown{
+
+    }
+}
